@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login – FORGE STORE</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Exo+2:wght@400;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo"><a href="index.html" style="color:inherit;text-decoration:none;">⬡ FORGE STORE</a></div>
+  </nav>
+
+  <div class="auth-wrapper">
+    <div class="auth-box">
+      <div class="auth-icon">⬡</div>
+      <h2 class="auth-title">LOGIN / DAFTAR</h2>
+      <p class="auth-sub">Masuk akaun untuk semak status order anda</p>
+
+      <div class="auth-tabs">
+        <button class="auth-tab active" onclick="switchTab('login', this)">LOG MASUK</button>
+        <button class="auth-tab" onclick="switchTab('register', this)">DAFTAR</button>
+      </div>
+
+      <!-- LOGIN FORM -->
+      <div id="loginForm">
+        <label class="form-label">Email</label>
+        <input type="email" id="loginEmail" placeholder="email@anda.com"/>
+
+        <label class="form-label">Password</label>
+        <input type="password" id="loginPassword" placeholder="••••••••"/>
+
+        <div id="loginError" class="auth-error"></div>
+        <button class="submit-btn" onclick="loginUser()">LOG MASUK →</button>
+        <p class="forgot-link" onclick="forgotPassword()">Lupa password?</p>
+      </div>
+
+      <!-- REGISTER FORM -->
+      <div id="registerForm" style="display:none;">
+        <label class="form-label">Nama Penuh</label>
+        <input type="text" id="regName" placeholder="Ahmad bin Ali"/>
+
+        <label class="form-label">Email</label>
+        <input type="email" id="regEmail" placeholder="email@anda.com"/>
+
+        <label class="form-label">Password</label>
+        <input type="password" id="regPassword" placeholder="Min 6 karakter"/>
+
+        <div id="registerError" class="auth-error"></div>
+        <button class="submit-btn" onclick="registerUser()">DAFTAR SEKARANG →</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase.js"></script>
+  <script src="app.js"></script>
+
+  <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+  <script src="supabase.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>

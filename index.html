@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FORGE STORE – Digital Services</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Exo+2:wght@400;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- ANNOUNCEMENT BANNER -->
+<div class="announcement-bar" id="announcementBar">
+  <div class="announcement-content">
+    <span class="announcement-icon">📢</span>
+    <span class="announcement-text">
+      ⚡ STORE BUKA PADA JAM <strong>2:00 P.M</strong> SEHINGGA JAM <strong>7:00 P.M</strong> &nbsp;|&nbsp; 
+      🔧 Masa proses order: 1-3 jam &nbsp;|&nbsp; 
+      💬 Hubungi kami di WhatsApp atau Telegram untuk maklumat lanjut
+    </span>
+    <span class="announcement-text">
+      ⚡ STORE BUKA PADA JAM <strong>2:00 P.M</strong> SEHINGGA JAM <strong>7:00 P.M</strong> &nbsp;|&nbsp; 
+      🔧 Masa proses order: 1-3 jam &nbsp;|&nbsp; 
+      💬 Hubungi kami di WhatsApp atau Telegram untuk maklumat lanjut
+    </span>
+  </div>
+  <button class="announcement-close" onclick="closeAnnouncement()">✕</button>
+</div>
+
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">⬡ FORGE STORE</div>
+    <div class="cart-btn" onclick="toggleCart()">
+      🛒 Cart <span class="cart-count" id="cartCount">0</span>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>DIGITAL SERVICES<br><span>LEVEL UP YOUR SERVER</span></h1>
+      <p>VPS • Hosting • Bot Discord • Panel Install & Lain-lain</p>
+    </div>
+    <div class="scan-lines"></div>
+  </section>
+
+  <!-- FILTER -->
+  <div class="filter-bar">
+    <button class="filter-btn active" onclick="filterProducts('all', this)">Semua</button>
+    <button class="filter-btn" onclick="filterProducts('vps', this)">VPS</button>
+    <button class="filter-btn" onclick="filterProducts('hosting', this)">Hosting</button>
+    <button class="filter-btn" onclick="filterProducts('bot', this)">Bot Discord</button>
+    <button class="filter-btn" onclick="filterProducts('jasa', this)">Jasa</button>
+  </div>
+
+  <!-- PRODUCTS -->
+  <section class="products" id="productGrid"></section>
+
+  <!-- CART SIDEBAR -->
+  <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>🛒 Troli Anda</h3>
+      <button onclick="toggleCart()">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer">
+      <div class="cart-total">JUMLAH: <span id="cartTotal">RM0.00</span></div>
+      <a href="checkout.html" id="checkoutBtn" class="checkout-btn" onclick="saveCart()">PROCEED TO CHECKOUT →</a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 FORGE STORE · Hubungi kami di Telegram: <a href="#">@FORGE STORE</a> · WhatsApp: <a href="#">+60 1X-XXXXXXX</a></p>
+  </footer>
+
+  <script src="app.js"></script>
+
+  <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+  <script src="supabase.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

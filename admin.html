@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin – FORGE STORE</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Exo+2:wght@400;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">⬡ ADMIN PANEL</div>
+    <div style="display:flex;gap:1rem;align-items:center;">
+      <span id="adminEmail" style="color:var(--muted);font-size:0.85rem;"></span>
+      <button class="cart-btn" onclick="logoutAdmin()">LOGOUT</button>
+    </div>
+  </nav>
+
+  <div class="admin-wrapper">
+
+    <!-- STATS -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-label">TOTAL ORDER</div>
+        <div class="stat-value" id="statTotal">0</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">PENDING</div>
+        <div class="stat-value pending" id="statPending">0</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">SELESAI</div>
+        <div class="stat-value done" id="statDone">0</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">JUMLAH PENDAPATAN</div>
+        <div class="stat-value" id="statRevenue">RM0</div>
+      </div>
+    </div>
+
+    <!-- FILTER STATUS -->
+    <div class="filter-bar" style="margin-bottom:1rem;">
+      <button class="filter-btn active" onclick="filterOrders('all', this)">Semua</button>
+      <button class="filter-btn" onclick="filterOrders('pending', this)">Pending</button>
+      <button class="filter-btn" onclick="filterOrders('processing', this)">Processing</button>
+      <button class="filter-btn" onclick="filterOrders('selesai', this)">Selesai</button>
+      <button class="filter-btn" onclick="filterOrders('batal', this)">Dibatal</button>
+    </div>
+
+    <!-- ORDERS TABLE -->
+    <div class="admin-table-wrap">
+      <table class="admin-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>NAMA</th>
+            <th>CONTACT</th>
+            <th>ITEMS</th>
+            <th>JUMLAH</th>
+            <th>TARIKH</th>
+            <th>STATUS</th>
+            <th>TINDAKAN</th>
+          </tr>
+        </thead>
+        <tbody id="ordersTableBody">
+          <tr><td colspan="8" style="text-align:center;color:var(--muted);padding:2rem;">Memuatkan...</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase.js"></script>
+  <script src="admin.js"></script>
+
+  <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+  <script src="supabase.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
