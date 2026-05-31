@@ -3,7 +3,7 @@ const products = [
   {
     id: 1, cat: "vps", icon: "🖥️",
     badge: "POPULAR", badgeType: "",
-    name: "VPS STATIC",
+    name: "VPS LOW",
     specs: ["2 vCPU", "4GB RAM", "50GB SSD NVMe", "Unlimited Bandwidth", "Full Root Access"],
     price: 13, unit: "/bulan"
   },
@@ -17,58 +17,65 @@ const products = [
   {
     id: 3, cat: "hosting", icon: "🌐",
     badge: null,
-    name: "SA-MP Hosting Pro",
+    name: "SA-MP Hosting LOW",
     specs: ["50 Slot Players", "4GB RAM", "1 Database (PHPMYADMIN)", "Anti-Crash System", "Panel Pterodactyl"],
     price: 7, unit: "/bulan"
   },
   {
     id: 4, cat: "hosting", icon: "🌐",
     badge: "NEW", badgeType: "",
-    name: "FiveM Hosting",
-    specs: ["128 Slot Players", "6GB RAM", "MySQL Included", "Custom Resources", "Panel Pterodactyl"],
-    price: 45, unit: "/bulan"
+    name: "SA-MP HOSTING MED",
+    specs: ["100 Slot Players", "6GB RAM", "1 Database (PMA)", "Custom Resources", "Panel Pterodactyl"],
+    price: 10, unit: "/bulan"
   },
-  {
-    id: 5, cat: "bot", icon: "🤖",
-    badge: "HOT", badgeType: "hot",
-    name: "Bot Discord.js Basic",
-    specs: ["Node.js 20 LTS", "256MB RAM", "24/7 Online", "1 Bot Token", "Restart Otomatis"],
-    price: 8, unit: "/bulan"
+    {
+    id: 5, cat: "hosting", icon: "🌐",
+    badge: "NEW", badgeType: "",
+    name: "SA-MP HOSTING HIGH",
+    specs: ["120 Slot Players", "6GB RAM", "1 Database (PMA)", "Custom Resources", "Panel Pterodactyl"],
+    price: 10, unit: "/bulan"
   },
   {
     id: 6, cat: "bot", icon: "🤖",
-    badge: null,
-    name: "Bot Discord.js Pro",
-    specs: ["Node.js 20 LTS", "1GB RAM", "24/7 Online", "3 Bot Token", "MongoDB Included"],
-    price: 20, unit: "/bulan"
+    badge: "HOT", badgeType: "hot",
+    name: "Bot Discord.js Basic",
+    specs: ["Node.js 20 LTS", "256MB RAM", "24/7 Online", "1 Bot Token", "Restart Otomatis"],
+    price: 7.50, unit: "/bulan"
   },
   {
     id: 7, cat: "bot", icon: "🤖",
+    badge: null,
+    name: "Bot Discord.js Pro",
+    specs: ["Node.js 20 LTS", "1GB RAM", "24/7 Online", "3 Bot Token", "MongoDB Included"],
+    price: 10, unit: "/bulan"
+  },
+  {
+    id: 8, cat: "bot", icon: "🤖",
     badge: "NEW", badgeType: "",
     name: "Python Bot Hosting",
     specs: ["Python 3.11", "512MB RAM", "24/7 Online", "discord.py / nextcord", "Restart Otomatis"],
     price: 10, unit: "/bulan"
   },
   {
-    id: 8, cat: "jasa", icon: "🔧",
+    id: 9, cat: "jasa", icon: "🔧",
     badge: null,
     name: "Install Panel Pterodactyl",
-    specs: ["Setup Domain + SSL", "Nginx Config", "MySQL Setup", "Wings Node Setup", "Tempoh: 1-3 Jam"],
-    price: 50, unit: "/sekali"
-  },
-  {
-    id: 9, cat: "jasa", icon: "🔧",
-    badge: "POPULAR", badgeType: "",
-    name: "Setup SAMP Server",
-    specs: ["Install SA-MP Server", "Config Gamemode", "Install Plugin Asas", "Optimize Performance", "Tempoh: 2-4 Jam"],
-    price: 40, unit: "/sekali"
+    specs: ["Domain from customer", "Free setup NODE", "Tempoh: 1-3 Jam"],
+    price: 10, unit: "/sekali"
   },
   {
     id: 10, cat: "jasa", icon: "🔧",
+    badge: "POPULAR", badgeType: "",
+    name: "Setup Bot Backup PMA",
+    specs: ["Backup Database Harian", "PMA Config", "Skrip Backup Otomatis", "Tempoh: 1-2 Jam"],
+    price: 15, unit: "/sekali"
+  },
+  {
+    id: 11, cat: "jasa", icon: "🔧",
     badge: null,
-    name: "Develop Bot Discord",
-    specs: ["Custom Commands", "Embed Messages", "Role Management", "Prefix / Slash Commands", "Source Code Diberikan"],
-    price: 80, unit: "/projek"
+    name: "Setup Bot JS UCP",
+    specs: ["Bot Dari Customer", "Tempoh: 1-3 Jam", "Free Rename Bot"],
+    price: 20, unit: "/projek"
   }
 ]
 
