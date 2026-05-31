@@ -48,14 +48,13 @@
     </div>
   </section>
 
-  <!-- SUCCESS MODAL -->
   <div class="modal-overlay" id="modalOverlay">
     <div class="modal-box">
       <div class="modal-icon">✔</div>
       <h2>ORDER DITERIMA!</h2>
       <p>Terima kasih! Order anda telah direkodkan.<br/>Sila hantar resit pembayaran kepada kami.</p>
       <div class="modal-contacts">
-        <a href="https://t.me/syahhensem" class="modal-btn tele">📲 Telegram</a>
+        <a href="https://t.me/forgestore" class="modal-btn tele">📲 Telegram</a>
         <a href="https://wa.me/601155905139" class="modal-btn wapp">💬 WhatsApp</a>
       </div>
       <button onclick="closeModal()" class="modal-close">Tutup</button>
@@ -66,9 +65,8 @@
   <script src="supabase.js"></script>
   <script src="app.js"></script>
   <script>
-    // Tunggu Supabase ready baru loadCheckout
-    document.addEventListener('DOMContentLoaded', () => {
-      setTimeout(() => loadCheckout(), 100)
+    window.addEventListener('load', () => {
+      setTimeout(() => loadCheckout(), 300)
     })
   </script>
 </body>

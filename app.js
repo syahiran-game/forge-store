@@ -73,7 +73,7 @@ const products = [
 ]
 
 // ── CART STATE ─────────────────────────────────────────────
-let cart = JSON.parse(localStorage.getItem('nexacart') || '[]')
+let cart = JSON.parse(localStorage.getItem('forgecart') || '[]')
 
 // ── RENDER PRODUCTS ────────────────────────────────────────
 function renderProducts(filter = 'all') {
@@ -137,7 +137,7 @@ function removeFromCart(id) {
 }
 
 function saveCart() {
-  localStorage.setItem('nexacart', JSON.stringify(cart))
+  localStorage.setItem('forgecart', JSON.stringify(cart))
 }
 
 function updateCartUI() {
@@ -199,7 +199,7 @@ function showAddFeedback(id) {
 
 // ── CHECKOUT ───────────────────────────────────────────────
 function loadCheckout() {
-  const cart = JSON.parse(localStorage.getItem('nexacart') || '[]')
+  const cart = JSON.parse(localStorage.getItem('forgecart') || '[]')
   const summaryEl = document.getElementById('orderSummary')
   const totalEl = document.getElementById('orderTotal')
   if (!summaryEl) return
@@ -224,10 +224,9 @@ async function submitOrder(e) {
 
   const btn = document.getElementById('submitBtn')
   const errEl = document.getElementById('submitError')
-  const cart = JSON.parse(localStorage.getItem('nexacart') || '[]')
+  const cart = JSON.parse(localStorage.getItem('forgecart') || '[]')
 
-  // Semak db wujud
-  if (typeof db === 'undefined' || !db) {
+  if (!window.db) {
     if (errEl) errEl.textContent = '❌ Sambungan database gagal. Reload page dan cuba lagi.'
     return
   }
@@ -247,7 +246,7 @@ async function submitOrder(e) {
   const total = cart.reduce((s, i) => s + i.price * (i.qty || 1), 0)
 
   try {
-    const { data, error } = await db.from('orders').insert([{
+    const { data, error } = await window.db.from('orders').insert([{
       name, email, contact, note,
       items: cart,
       total,
@@ -261,14 +260,13 @@ async function submitOrder(e) {
       return
     }
 
-    // Hantar notif Telegram (tak block kalau gagal)
     try {
       await sendTelegramNotif({ name, contact, cart, total, note, id: data[0].id })
     } catch (tErr) {
       console.warn('Telegram notif gagal:', tErr)
     }
 
-    localStorage.removeItem('nexacart')
+    localStorage.removeItem('forgecart')
     document.getElementById('modalOverlay').classList.add('open')
 
   } catch (err) {
@@ -327,7 +325,7 @@ async function loginUser() {
   const password = document.getElementById('loginPassword').value
   const errEl = document.getElementById('loginError')
 
-  const { error } = await db.auth.signInWithPassword({ email, password })
+  const { error } = await window.db.auth.signInWithPassword({ email, password })
 
   if (error) {
     errEl.textContent = 'Email atau password salah.'
@@ -348,7 +346,7 @@ async function registerUser() {
     return
   }
 
-  const { error } = await db.auth.signUp({
+  const { error } = await window.db.auth.signUp({
     email, password,
     options: { data: { full_name: name } }
   })
@@ -365,7 +363,7 @@ async function registerUser() {
 async function forgotPassword() {
   const email = prompt('Masukkan email anda:')
   if (!email) return
-  await db.auth.resetPasswordForEmail(email)
+  await window.db.auth.resetPasswordForEmail(email)
   alert('Email reset password dah dihantar!')
 }
 
