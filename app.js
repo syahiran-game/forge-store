@@ -76,6 +76,41 @@ const products = [
     name: "Setup Bot JS UCP",
     specs: ["Bot Dari Customer", "Tempoh: 1-3 Jam", "Free Rename Bot"],
     price: 20, unit: "/projek"
+  },
+  {
+    id: 12, cat: "hosting", icon: "🌐",
+    badge: "NEW", badgeType: "",
+    name: "MC Hosting Java LOW",
+    specs: ["50 Slot Players", "4GB RAM", "1 Database (PHPMYADMIN)", "Anti-Crash System", "Panel Pterodactyl"],
+    price: 10, unit: "/bulan"
+  },
+  {
+    id: 13, cat: "hosting", icon: "🌐",
+    badge: "NEW", badgeType: "",
+    name: "MC Hosting Java MED",
+    specs: ["100 Slot Players", "6GB RAM", "1 Database (PMA)", "Custom Resources", "Panel Pterodactyl"],
+    price: 13, unit: "/bulan"
+  },
+  {
+    id: 14, cat: "hosting", icon: "🌐",
+    badge: "NEW", badgeType: "",
+    name: "MC Hosting Bedrock LOW",
+    specs: ["50 Slot Players", "4GB RAM", "1 Database (PHPMYADMIN)", "Anti-Crash System", "Panel Pterodactyl"],
+    price: 10, unit: "/bulan"
+  },
+  {
+    id: 15, cat: "hosting", icon: "🌐",
+    badge: "NEW", badgeType: "",
+    name: "MC Hosting Bedrock MED",
+    specs: ["100 Slot Players", "6GB RAM", "1 Database (PMA)", "Custom Resources", "Panel Pterodactyl"],
+    price: 13, unit: "/bulan"
+  },
+  {
+    id: 16, cat: "jasa", icon: "🔧",
+    badge: "NEW", badgeType: "",
+    name: "Jasa Rename Gamemode SA-MP",
+    specs: ["Rename Sampai Akar", "Tempoh: 5-24 Jam", "Free Add 2 Mapping", "Free Set Admin (2 Admin)"],
+    price: 10, unit: "/projek"
   }
 ]
 
