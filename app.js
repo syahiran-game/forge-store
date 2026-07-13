@@ -5,14 +5,14 @@ const products = [
     badge: "POPULAR", badgeType: "",
     name: "VPS LOW",
     specs: ["2 vCPU", "4GB RAM", "50GB SSD NVMe", "Unlimited Bandwidth", "Full Root Access"],
-    price: 13, unit: "/bulan"
+    price: 7, unit: "/bulan"
   },
   {
     id: 2, cat: "vps", icon: "🖥️",
     badge: null,
     name: "VPS MEDIUM",
     specs: ["4 vCPU", "8GB RAM", "100GB SSD NVMe", "Unlimited Bandwidth", "DDoS Protection"],
-    price: 17, unit: "/bulan"
+    price: 10, unit: "/bulan"
   },
   {
     id: 3, cat: "hosting", icon: "🌐",
@@ -111,6 +111,13 @@ const products = [
     name: "Jasa Rename Gamemode SA-MP",
     specs: ["Rename Sampai Akar", "Tempoh: 5-24 Jam", "Free Add 2 Mapping", "Free Set Admin (2 Admin)"],
     price: 10, unit: "/projek"
+  },
+  {
+    id: 17, cat: "vps", icon: "🖥️",
+    badge: null,
+    name: "VPS HIGH",
+    specs: ["8 vCPU", "16GB RAM", "150GB SSD NVMe", "Unlimited Bandwidth", "DDoS Protection"],
+    price: 13, unit: "/bulan"
   }
 ]
 
