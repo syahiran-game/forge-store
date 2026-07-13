@@ -68,7 +68,7 @@ const products = [
     badge: null,
     name: "Install Panel Pterodactyl",
     specs: ["Domain from customer", "Free setup NODE", "Tempoh: 1-3 Jam"],
-    price: 10, unit: "/sekali"
+    price: 5, unit: "/sekali"
   },
   {
     id: 10, cat: "jasa", icon: "🔧",
@@ -83,6 +83,27 @@ const products = [
     name: "Setup Bot JS UCP",
     specs: ["Bot Dari Customer", "Tempoh: 1-3 Jam", "Free Rename Bot"],
     price: 20, unit: "/projek"
+  },
+  {
+    id: 18, cat: "jasa", icon: "🔧",
+    badge: null,
+    name: "Jasa Install PMA",
+    specs: ["User And PW By Cust"],
+    price: 5, unit: "/projek"
+  },
+  {
+    id: 19, cat: "jasa", icon: "🔧",
+    badge: null,
+    name: "Jasa Install Wings",
+    specs: ["None"],
+    price: 1, unit: "/projek"
+  },
+  {
+    id: 20, cat: "jasa", icon: "🔧",
+    badge: null,
+    name: "Jasa On Bot WA OR Telegram",
+    specs: ["Bot Dari Customer", "Tempoh: 1-3 Jam", "Free Rename Bot"],
+    price: 1, unit: "/projek"
   },
   {
     id: 12, cat: "hosting", icon: "🌐",
